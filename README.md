@@ -8,8 +8,8 @@ of the LMS profile, refreshed from the token on every login, and must never let 
 LMS-managed profile be edited locally. Local (non-LMS) users own their data in the
 spoke DB.
 
-One source of truth so the same "who-may-do-what" decision is not duplicated (and
-allowed to diverge) across consumers.
+One source of truth, so the same "who-may-do-what" decision is not duplicated across
+consumers and left to diverge.
 
 ## Exports
 
@@ -40,10 +40,12 @@ Auth.js OAuth provider factory for "Sign in with Tapiz LMS".
 can be tampered with, so paid actions MUST be re-verified server-side where the token
 signature is checked. Never trust client entitlements to grant access.
 
-## Consuming
+## Install
 
-Not published to npm (yet). Build (`npm run build`) and copy `dist/` + `package.json`
-into the consumer's `node_modules/@tapizlabs/identity/` — Turbopack on Windows does not
-resolve symlinks reliably.
+```bash
+npm install @tapizlabs/identity
+```
+
+Zero runtime dependencies. ESM only.
 
 See `01-tapiz-sso-fix.md` in the workspace root for the full design.

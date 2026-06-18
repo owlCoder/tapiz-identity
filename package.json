@@ -1,6 +1,6 @@
 {
   "name": "@tapizlabs/identity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "private": false,
   "description": "Zero-dependency identity & SSO-projection rules shared across Tapiz products (LMS + spokes).",
