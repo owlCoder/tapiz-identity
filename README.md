@@ -47,5 +47,3 @@ npm install @tapizlabs/identity
 ```
 
 Zero runtime dependencies. ESM only.
-
-See `01-tapiz-sso-fix.md` in the workspace root for the full design.
