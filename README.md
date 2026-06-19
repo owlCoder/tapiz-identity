@@ -1,5 +1,10 @@
 # @tapizlabs/identity
 
+[![npm version](https://img.shields.io/npm/v/@tapizlabs/identity.svg)](https://www.npmjs.com/package/@tapizlabs/identity)
+[![CI](https://github.com/owlCoder/tapiz-identity/actions/workflows/ci.yml/badge.svg)](https://github.com/owlCoder/tapiz-identity/actions/workflows/ci.yml)
+[![license](https://img.shields.io/npm/l/@tapizlabs/identity.svg)](./LICENSE)
+[![types](https://img.shields.io/npm/types/@tapizlabs/identity.svg)](https://www.npmjs.com/package/@tapizlabs/identity)
+
 Zero-dependency identity & SSO-projection rules shared across the Tapiz ecosystem
 (LMS UI/API + spoke products: Boards, Whiteboard, …).
 
