@@ -52,11 +52,20 @@ function buildAuto() {
     if (items.length) lines.push(`- **${label}** (${items.length}): ${list(items)}`);
   };
 
-  // Backend (Clean Architecture)
+  // Backend (Clean Architecture, optionally with RouteContract pilot)
   if (existsSync(join(ROOT, "src/Application/services"))) {
     add("Domains (services)", dirs("src/Application/services"));
-    add("Routes", dirs("src/Presentation/routes"));
+    add("Routes (legacy pattern)", dirs("src/Presentation/routes"));
+    if (existsSync(join(ROOT, "src/Presentation/contracts"))) {
+      add("Domains on RouteContract pattern", dirs("src/Presentation/contracts"));
+    }
     add("Repositories", dirs("src/Infrastructure/repositories"));
+    return lines;
+  }
+  // SDK generator (openapi-generator scripts/config, no src/)
+  if (existsSync(join(ROOT, "scripts")) && existsSync(join(ROOT, "config")) && !existsSync(join(ROOT, "src"))) {
+    add("Generator scripts", files("scripts", [".ts"]));
+    add("Generator configs", files("config", [".json"]));
     return lines;
   }
   // SDK
